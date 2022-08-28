@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: space-evenly;
+    
+    }
+</style>
+<body>
+ <form onsubmit="dosum(); return false" >
+    <input type="text" placeholder="Enter First Number" id="num1"> <br>
+    <input type="text" placeholder="Enter Second Number" id="num2"> <br>
+    <button type="submit" >Sum</button>
+    
+ </form>  
+    <h1 id="space"></h1>
+
+    <form onsubmit="dosub(); return false" >
+        <input type="text" placeholder="Enter First Number" id="num3"> <br>
+        <input type="text" placeholder="Enter Second Number" id="num4"> <br>
+        <button type="submit" >Sub</button>
+        
+     </form>  
+        <h1 id="space2"></h1>
+
+        <form onsubmit="domul(); return false" >
+            <input type="text" placeholder="Enter First Number" id="num5"> <br>
+            <input type="text" placeholder="Enter Second Number" id="num6"> <br>
+            <button type="submit" >Mul</button>
+            
+         </form>  
+            <h1 id="space3"></h1>
+        
+            <form onsubmit="dodiv(); return false" >
+                <input type="text" placeholder="Enter First Number" id="num7"> <br>
+                <input type="text" placeholder="Enter Second Number" id="num8"> <br>
+                <button type="submit" >div</button>
+                
+             </form>  
+                <h1 id="space4"></h1>
+ <script>
+    
+    function dosum(){
+        let num1 = +document.querySelector("#num1").value
+        let num2 = +document.querySelector("#num2").value
+        let result = num1 + num2 ; 
+        document.querySelector("#space").innerHTML = result
+        }
+
+        function dosub(){
+        let num3 = +document.querySelector("#num3").value
+        let num4 = +document.querySelector("#num4").value
+        let result2 = num3 - num4 ; 
+        document.querySelector("#space2").innerHTML = result2
+        }
+  function domul(){
+        let num5 = +document.querySelector("#num5").value
+        let num6 = +document.querySelector("#num6").value
+     
+        let result3 = num5 * num6 ; 
+        document.querySelector("#space3").innerHTML = result3
+        }
+        function dodiv(){
+        let num7 = +document.querySelector("#num7").value
+        let num8 = +document.querySelector("#num8").value
+     
+        let result4 = num7 / num8 ; 
+        document.querySelector("#space4").innerHTML = result4
+        }
+ </script> 
+</body>
+</html>
